@@ -10,6 +10,7 @@ public class Money
     // instance variables - replace the example below with your own
     private int money;
     private int score;
+    private int bet;
 
     /**
      * Constructor for objects of class Money
@@ -19,6 +20,7 @@ public class Money
         // initialise instance variables
         money = 10;
         score=0;
+        bet=0;
     }
 
     /**
@@ -27,10 +29,23 @@ public class Money
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public void noMoney(int y)
+    public void noMoney()
     {
         // put your code here
         System.out.print("You lost all your money.");
         System.exit(0);
+    }
+    
+    public void betting(int bet)
+    {
+          if (bet>money)
+        {
+            System.out.print("Bet cannot be greater than current money.");
+            //go back
+        }
+        money= money - bet;
+        //if guess=true win money
+        money= money + (bet*2);
+        System.out.print("Money:$" + money);
     }
 }
