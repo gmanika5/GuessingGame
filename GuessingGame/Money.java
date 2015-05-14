@@ -1,22 +1,24 @@
 
 /**
- * Write a description of class Guess here.
+ * Write a description of class Money here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Guess 
+public class Money
 {
     // instance variables - replace the example below with your own
-    private int x;
+    private int money;
+    private int score;
 
     /**
-     * Constructor for objects of class Guess
+     * Constructor for objects of class Money
      */
-    public Guess()
+    public Money()
     {
         // initialise instance variables
-        x = 0;
+        money = 10;
+        score=0;
     }
 
     /**
@@ -25,9 +27,10 @@ public class Guess
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int random(int num)
+    public void noMoney(int y)
     {
         // put your code here
-        return (int)(Math.random()*num);
+        System.out.print("You lost all your money.");
+        System.exit(0);
     }
 }
