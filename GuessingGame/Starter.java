@@ -1,30 +1,29 @@
-
+import java.util.Scanner;
 /**
  * Write a description of class Starter here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Starter extends Money
+public class Starter
 {
-    // instance variables - replace the example below with your own
-    
     public static void main(String[] args)
     {  
         boolean cont=true;
-
-        Money x= new Money();
-        System.out.println(x);
-        Money.noMoney();
-        System.out.println(x);
+        Scanner sc=new Scanner(System.in);
+        Money money=new Money();
+        System.out.println(money.dollars());     
+       
 
         while (cont==true)
         {
-            if (x.dollars() < 1)
+            if (money.dollars() < 1)
             {
-                   noMoney();
+                Money.noMoney();
             }
-            //System.out.println(x.dollars());
+            System.out.println(money.dollars());
+            System.out.println("Continue? (True or False)"); 
+            cont=sc.nextBoolean();
         }
     }
 }

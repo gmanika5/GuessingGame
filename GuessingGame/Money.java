@@ -8,7 +8,7 @@
 public class Money
 {
     // instance variables - replace the example below with your own
-    public  int money;
+    private static int money;
     private int score;
     private int bet;
 
@@ -29,14 +29,14 @@ public class Money
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public  static void noMoney()
+    public static void noMoney()
     {
         // put your code here
         System.out.print("You lost all your money.");
         System.exit(0);
     }
     
-    public void betting(int bet)
+    public static void betting(int bet)
     {
         
           while (bet>money)
@@ -50,8 +50,9 @@ public class Money
         System.out.print("Money:$" + money);
     }
     
-    public int dollars()
+    public static int dollars()
     {
         return money;
    }
+
 }
