@@ -38,18 +38,18 @@ public class Money
     
     public static void betting(int bet)
     {
-        
-          while (bet>money)
-        {
-            System.out.print("Bet cannot be greater than current money.");
-            //go back
-        }
+        //bet win
         money= money - bet;
         //if guess=true win money
         money= money + (bet*2);
         System.out.print("Money:$" + money);
     }
     
+    public static void loseBet(int bet)
+    {
+        money= money - bet;
+        System.out.print("Money:$" + money);
+    }
     public static int dollars()
     {
         return money;
