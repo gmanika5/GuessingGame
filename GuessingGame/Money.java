@@ -1,13 +1,12 @@
 
 /**
- * Write a description of class Money here.
+ * The Money class contains methods related to money.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Gajesh Manikanden 
+ * @Version 1
  */
 public class Money
 {
-    // instance variables - replace the example below with your own
     private static int money;
     private int score;
     private int bet;
@@ -17,42 +16,37 @@ public class Money
      */
     public Money()
     {
-        // initialise instance variables
         money =10;
         score=0;
         bet=0;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
+    //what happens if you have no money left to bet
     public static void noMoney()
     {
         // put your code here
-        System.out.print("You lost all your money.");
+        System.out.println("You lost all your money.");
         System.exit(0);
     }
-    
+    //bet win
     public static void betting(int bet)
     {
         //bet win
         money= money - bet;
         //if guess=true win money
         money= money + (bet*2);
-        System.out.print("Money:$" + money);
+        System.out.println("Money:$" + money);
     }
-    
+    //bet lose
     public static void loseBet(int bet)
     {
         money= money - bet;
-        System.out.print("Money:$" + money);
+        System.out.println("Money:$" + money);
     }
+    //return current money
     public static int dollars()
     {
         return money;
-   }
+    }
 
 }

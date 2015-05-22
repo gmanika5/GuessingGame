@@ -2,8 +2,8 @@ import java.util.Scanner;
 /**
  * Write a description of class Starter here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Gajesh Manikanden
+ * @Version 1
  */
 public class Starter
 {
@@ -27,7 +27,7 @@ public class Starter
             {
                 Money.noMoney();
             }
-            System.out.println(money.dollars());
+            System.out.println("Money:$"+money.dollars()+" ");
             System.out.println("Continue betting? (True or False)"); 
             cont=sc.nextBoolean();
             System.out.println("Guessing game, 100 numbers to guess from");
@@ -40,6 +40,8 @@ public class Starter
                 bet=sc.nextInt();
             }
             number=random();
+            System.out.println("Start guessing");
+            System.out.println("t"+number);
             for (int i=0; i<5; i++)
             {
                 response=sc.nextInt();
@@ -62,7 +64,7 @@ public class Starter
             }
             if (response != number)
             {
-                System.out.println("You lose the bet.");
+                System.out.println(" You lose the bet.");
                 Money.loseBet(bet);
             }
         }
