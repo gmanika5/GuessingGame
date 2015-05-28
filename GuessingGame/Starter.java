@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 /**
  * Write a description of class Starter here.
  * 
@@ -12,15 +13,17 @@ public class Starter
         // put your code here
         return (int)(Math.random()*100);
     }
-
+   
     public static void main(String[] args)
     {  
+       
         boolean cont=true;
         Scanner sc=new Scanner(System.in);
         Money money=new Money();
         int number=0;
         int response=0;
-
+        
+        
         while (cont==true)
         {
             if (money.dollars() < 1)
@@ -28,11 +31,11 @@ public class Starter
                 Money.noMoney();
             }
             System.out.println("Money:$"+money.dollars()+" ");
-            System.out.println("Continue betting? (True or False)"); 
-            cont=sc.nextBoolean();
+   
             System.out.println("Guessing game, 100 numbers to guess from");
             System.out.println("How much are you betting?");
             int bet=sc.nextInt();
+             System.out.println(" ");
             while (bet > Money.dollars())
             {
                 System.out.println("Bet cannot be greater than current balance.");
@@ -41,7 +44,6 @@ public class Starter
             }
             number=random();
             System.out.println("Start guessing");
-            System.out.println("t"+number);
             for (int i=0; i<5; i++)
             {
                 response=sc.nextInt();
@@ -64,7 +66,7 @@ public class Starter
             }
             if (response != number)
             {
-                System.out.println(" You lose the bet.");
+                System.out.println("You lose the bet.");
                 Money.loseBet(bet);
             }
         }

@@ -17,7 +17,7 @@ public class Money
     public Money()
     {
         money =10;
-        score=0;
+        
         bet=0;
     }
 
@@ -41,7 +41,7 @@ public class Money
     public static void loseBet(int bet)
     {
         money= money - bet;
-        System.out.println("Money:$" + money);
+        
     }
     //return current money
     public static int dollars()
